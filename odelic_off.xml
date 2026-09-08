@@ -1,14 +1,8 @@
-<macro name="ODELIC ON" icon="LIGHTBULB">
-    <assert-service description="Ensure ODELIC service" uuid="9e5d1e47-5c13-43a0-8635-82adffc0386f">
-        <assert-characteristic description="Ensure ODELIC write characteristic" uuid="9e5d1e47-5c13-43a0-8635-82adffc1386f">
-            <property name="WRITE" requirement="MANDATORY"/>
-        </assert-characteristic>
-    </assert-service>
-
-    <write description="ODELIC ON"
-        characteristic-uuid="9e5d1e47-5c13-43a0-8635-82adffc1386f"
-        service-uuid="9e5d1e47-5c13-43a0-8635-82adffc03
-        86f"
-        value="010A55010000"
-        type="WRITE_COMMAND"/>
+<macro name="ODELIC OFF" icon="POWER">
+  <assert-service description="Ensure ODELIC Bridge service" uuid="7b8d0001-6f2a-4e9d-a7c4-216300000001">
+    <assert-characteristic description="Ensure ODELIC Bridge control characteristic" uuid="7b8d0002-6f2a-4e9d-a7c4-216300000001">
+      <property name="WRITE" requirement="MANDATORY"/>
+    </assert-characteristic>
+  </assert-service>
+  <write description="ODELIC OFF" service-uuid="7b8d0001-6f2a-4e9d-a7c4-216300000001" characteristic-uuid="7b8d0002-6f2a-4e9d-a7c4-216300000001" value="00" type="WRITE_REQUEST"/>
 </macro>
