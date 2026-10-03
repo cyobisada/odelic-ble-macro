@@ -1,0 +1,7 @@
+<macro name="ODELIC ON" icon="POWER">
+  <write description="ODELIC ON"
+         service-uuid="7b8d0001-6f2a-4e9d-a7c4-216300000001"
+         characteristic-uuid="7b8d0002-6f2a-4e9d-a7c4-216300000001"
+         value="01"
+         type="WRITE_REQUEST"/>
+</macro>
